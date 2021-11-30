@@ -1,4 +1,7 @@
 # Instagram - HomeUI
 [Link](https://nasty-login.netlify.app/)
-![insta_homeui](https://user-images.githubusercontent.com/83149058/143986706-e3b70ba8-aaa4-49db-aa8a-a21bab328b29.PNG)
+### Homepage UI
+![insta_homeui](https://user-images.githubusercontent.com/83149058/143987369-65db084f-9a02-46fe-92df-ce023baacc33.PNG)
+### Post
+![insta_post](https://user-images.githubusercontent.com/83149058/143987400-08659c53-557d-4b4f-9ab3-0d5f776f25b4.PNG)
 
