@@ -1,5 +1,5 @@
 # Instagram - HomeUI
-[Link](https://nasty-login.netlify.app/)
+[Link](https://amar-insta-homeui.netlify.app/)
 ### Homepage UI
 ![insta_homeui](https://user-images.githubusercontent.com/83149058/143987369-65db084f-9a02-46fe-92df-ce023baacc33.PNG)
 ### Post
