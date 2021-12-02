@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+   </head>
+  <body>
+
+<div class="navbar">
+    <div class="navbarLeft">
+        <img src="data:image/png;base64,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" alt="" class="navbarLogo">
+    </div>
+    <div class="navbarCenter">
+        <div class="searchContainer">
+            <i class="searchLogo fas fa-search"></i>
+            <input type="text" class="searchInput" placeholder="Search Reddit..">
+
+        </div>
+           </div>
+    <div class="navbarRight">
+<button class="loginButton">Log In</button>
+<button class="signupButton">Sign Up</button>
+<div class="profileContainer">
+    <i class="navAvatar far fa-user"></i>
+    <i class="downArrow fas fa-chevron-down"></i>
+</div>
+    </div>
+    </div>
+
+    <div class="header">
+      <h5 class="trendingToday">Trending Today</h5>
+<div class="headerImgsContainer">
+       <div class="headerImgContainer">
+                <img src="https://cdn.cnn.com/cnnnext/dam/assets/211130182553-chris-cuomo-2020-exlarge-169.jpg" alt="" class="headerImg">
+<div class="headerImgCaption">
+<h1 class="captionHeading">Chris Coumo</h1>
+<p class="captionContent">CNN suspends Chris Cuomo
+   indefinitely</p>
+   <div class="captionFooter"><img src="https://a.thumbs.redditmedia.com/E0Bkwgwe5TkVLflBA7WMe9fMSC7DV2UOeff-UpNJeb0.png" alt="" class="captionFooterLogo">
+<span class="captionFooterText"> r/news and more</span></div>
+
+</div>
+       </div>
+       <div class="headerImgContainer">
+        <img src="https://cdn.cnn.com/cnnnext/dam/assets/211130182553-chris-cuomo-2020-exlarge-169.jpg" alt="" class="headerImg">
+<div class="headerImgCaption">
+<h1 class="captionHeading">Chris Coumo</h1>
+<p class="captionContent">CNN suspends Chris Cuomo
+indefinitely</p>
+<div class="captionFooter"><img src="https://a.thumbs.redditmedia.com/E0Bkwgwe5TkVLflBA7WMe9fMSC7DV2UOeff-UpNJeb0.png" alt="" class="captionFooterLogo">
+<span class="captionFooterText"> r/news and more</span></div>
+
+</div>
+</div>
+<div class="headerImgContainer">
+    <img src="https://cdn.cnn.com/cnnnext/dam/assets/211130182553-chris-cuomo-2020-exlarge-169.jpg" alt="" class="headerImg">
+<div class="headerImgCaption">
+<h1 class="captionHeading">Chris Coumo</h1>
+<p class="captionContent">CNN suspends Chris Cuomo
+indefinitely</p>
+<div class="captionFooter"><img src="https://a.thumbs.redditmedia.com/E0Bkwgwe5TkVLflBA7WMe9fMSC7DV2UOeff-UpNJeb0.png" alt="" class="captionFooterLogo">
+<span class="captionFooterText"> r/news and more</span></div>
+
+</div>
+</div>
+<div class="headerImgContainer">
+    <img src="https://cdn.cnn.com/cnnnext/dam/assets/211130182553-chris-cuomo-2020-exlarge-169.jpg" alt="" class="headerImg">
+<div class="headerImgCaption">
+<h1 class="captionHeading">Chris Coumo</h1>
+<p class="captionContent">CNN suspends Chris Cuomo
+indefinitely</p>
+<div class="captionFooter"><img src="https://a.thumbs.redditmedia.com/E0Bkwgwe5TkVLflBA7WMe9fMSC7DV2UOeff-UpNJeb0.png" alt="" class="captionFooterLogo">
+<span class="captionFooterText"> r/news and more</span></div>
+
+</div>
+</div>
+
+
+
+</div>
+    </div>
+
+<div class="mainContent">
+<div class="mainContentCenter">
+    <div class="exploreContainer">
+        <h5 class="trendingToday">Popular Posts</h5>
+            <div class="explore">
+              <div class="exploreLeft">
+                 <span class="exploreIconContainer">
+                    <i class="activeIcon burnIcon fas fa-burn"></i>
+                    <span class="iconText activeIcon">Hot</span>
+
+
+                </span>
+                <span class="exploreIconContainer">
+                    <span class="iconText activeIcon">India</span>
+
+                    <i class=" activeIcon exploredownArrow fas fa-chevron-down"></i>
+         </span>
+                 <span class="exploreIconContainer"><span class="iconText">New</span>
+
+                    <i class="exploreIcon fas fa-certificate"></i></span>
+                 <span class="exploreIconContainer"> <span class="iconText">Top</span>
+
+                    <i class="exploreIcon fas  fa-upload"></i>
+
+         </span>
+                 <span class="exploreIconContainer">
+                    <i class="exploreIcon fas fa-ellipsis-h"></i>
+
+         </span>
+              </div>
+              <div class="exploreRight">
+                  <span><i class="fas exploreIcon fa-columns fa-rotate" style="margin-right:0;width:20px;"></i></span>
+                  <i class="downArrow exploreIcon fas fa-chevron-down" style="margin-left: 0;"></i>
+
+              </div>
+            </div>
+            </div>
+<div class="postsContainer">
+    <div class="postContainer">
+        <div class="postHeader">
+<div class="postLeft">
+<span class="upvoteContainer">
+    <i class="upvote fas fa-long-arrow-alt-up"></i>
+<span class="upvoteCount">4.8k</span>
+<i class="downvote fas fa-long-arrow-alt-down"></i>
+</span>
+</div>
+          <div class="postCenter">
+                     <div class="postPage">
+                         <img src="https://styles.redditmedia.com/t5_2tn4t/styles/communityIcon_8drzyj2qc5f21.png" alt="" class="postPageImg">
+<span class="postPageName">DankIndianGamers</span>
+                     </div>
+                     <span class="postedBy">Posted by  u/Jeenius14 10 hours ago</span>
+                     <div class="badges">
+                         <span class="badge">
+                             <img src="https://preview.redd.it/award_images/t5_22cerq/klvxk1wggfd41_Helpful.png?width=32&height=32&crop=smart&auto=webp&s=e50908c50d797edd935ba8b5d9f0fb1372ff0bae" alt="" class="badgeIcon">
+                          <span class="badgeCount">30</span>
+                         </span>
+                         <span class="badge">
+                             <img src="https://preview.redd.it/award_images/t5_22cerq/5izbv4fn0md41_Wholesome.png?width=32&height=32&crop=smart&auto=webp&s=b3267c9d510c7b06dda6ec7d53cb587b9e822e44" alt="" class="badgeIcon">
+                          <span class="badgeCount">30</span>
+                         </span>
+                         <span class="badge">
+                             <img src="https://www.redditstatic.com/gold/awards/icon/silver_32.png" alt="" class="badgeIcon">
+                          <span class="badgeCount">30</span>
+                         </span>
+                         <span class="badge">
+                             <img src="https://www.redditstatic.com/gold/awards/icon/Illuminati_32.png" alt="" class="badgeIcon">
+                          <span class="badgeCount">30</span>
+                         </span>
+
+
+                     </div>
+          </div>
+<span class="joinButton"> <span class="joinText">Join</span><i class="joinButtonPlus fas fa-plus"></i></span>
+</div>
+
+<div class="postImgContainer">
+            <h5 class="postText">Rate my Gaming Setup</h5>
+        <img src="https://images.unsplash.com/photo-1598550476439-6847785fcea6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80" alt="" class="postImg">
+        </div>
+<div class="postFooter">
+  <div class="postFooterIcons">
+<div class="postFooterIconContainer">
+
+        <i  style="color:gray;" class="far fa-comment-alt"></i>
+        <span class="footerText">170 Comments</span>
+
+
+</div>
+<div class="postFooterIconContainer">
+
+    <i style="color:gray;" class="fas fa-share"></i>
+    <span class="footerText">Share</span>
+
+
+</div>
+<div class="postFooterIconContainer">
+
+    <i style="color:gray;" class="far fa-bookmark"></i>
+    <span class="footerText">Save</span>
+
+
+</div>
+<div class="postFooterIconContainer">
+
+    <i  style="color:gray;" class="fas fa-ellipsis-h"></i>
+
+
+
+</div>
+  </div>
+
+</div>
+</div>
+<div class="postContainer">
+    <div class="postHeader">
+<div class="postLeft">
+<span class="upvoteContainer">
+<i class="upvote fas fa-long-arrow-alt-up"></i>
+<span class="upvoteCount">4.8k</span>
+<i class="downvote fas fa-long-arrow-alt-down"></i>
+</span>
+</div>
+      <div class="postCenter">
+                 <div class="postPage">
+                     <img src="https://styles.redditmedia.com/t5_2tn4t/styles/communityIcon_8drzyj2qc5f21.png" alt="" class="postPageImg">
+<span class="postPageName">DankIndianGamers</span>
+                 </div>
+                 <span class="postedBy">Posted by  u/Jeenius14 10 hours ago</span>
+                 <div class="badges">
+                     <span class="badge">
+                         <img src="https://preview.redd.it/award_images/t5_22cerq/klvxk1wggfd41_Helpful.png?width=32&height=32&crop=smart&auto=webp&s=e50908c50d797edd935ba8b5d9f0fb1372ff0bae" alt="" class="badgeIcon">
+                      <span class="badgeCount">30</span>
+                     </span>
+                     <span class="badge">
+                         <img src="https://preview.redd.it/award_images/t5_22cerq/5izbv4fn0md41_Wholesome.png?width=32&height=32&crop=smart&auto=webp&s=b3267c9d510c7b06dda6ec7d53cb587b9e822e44" alt="" class="badgeIcon">
+                      <span class="badgeCount">30</span>
+                     </span>
+                     <span class="badge">
+                         <img src="https://www.redditstatic.com/gold/awards/icon/silver_32.png" alt="" class="badgeIcon">
+                      <span class="badgeCount">30</span>
+                     </span>
+                     <span class="badge">
+                         <img src="https://www.redditstatic.com/gold/awards/icon/Illuminati_32.png" alt="" class="badgeIcon">
+                      <span class="badgeCount">30</span>
+                     </span>
+
+
+                 </div>
+      </div>
+<span class="joinButton"> <span class="joinText">Join</span><i class="joinButtonPlus fas fa-plus"></i></span>
+</div>
+
+<div class="postImgContainer">
+        <h5 class="postText">Rate my Gaming Setup</h5>
+    <img src="https://images.unsplash.com/photo-1598550476439-6847785fcea6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80" alt="" class="postImg">
+    </div>
+<div class="postFooter">
+<div class="postFooterIcons">
+<div class="postFooterIconContainer">
+
+    <i  style="color:gray;" class="far fa-comment-alt"></i>
+    <span class="footerText">170 Comments</span>
+
+
+</div>
+<div class="postFooterIconContainer">
+
+<i style="color:gray;" class="fas fa-share"></i>
+<span class="footerText">Share</span>
+
+
+</div>
+<div class="postFooterIconContainer">
+
+<i style="color:gray;" class="far fa-bookmark"></i>
+<span class="footerText">Save</span>
+
+
+</div>
+<div class="postFooterIconContainer">
+
+<i  style="color:gray;" class="fas fa-ellipsis-h"></i>
+
+
+
+</div>
+</div>
+
+</div>
+</div>
+<div class="postContainer">
+    <div class="postHeader">
+<div class="postLeft">
+<span class="upvoteContainer">
+<i class="upvote fas fa-long-arrow-alt-up"></i>
+<span class="upvoteCount">4.8k</span>
+<i class="downvote fas fa-long-arrow-alt-down"></i>
+</span>
+</div>
+      <div class="postCenter">
+                 <div class="postPage">
+                     <img src="https://styles.redditmedia.com/t5_2tn4t/styles/communityIcon_8drzyj2qc5f21.png" alt="" class="postPageImg">
+<span class="postPageName">DankIndianGamers</span>
+                 </div>
+                 <span class="postedBy">Posted by  u/Jeenius14 10 hours ago</span>
+                 <div class="badges">
+                     <span class="badge">
+                         <img src="https://preview.redd.it/award_images/t5_22cerq/klvxk1wggfd41_Helpful.png?width=32&height=32&crop=smart&auto=webp&s=e50908c50d797edd935ba8b5d9f0fb1372ff0bae" alt="" class="badgeIcon">
+                      <span class="badgeCount">30</span>
+                     </span>
+                     <span class="badge">
+                         <img src="https://preview.redd.it/award_images/t5_22cerq/5izbv4fn0md41_Wholesome.png?width=32&height=32&crop=smart&auto=webp&s=b3267c9d510c7b06dda6ec7d53cb587b9e822e44" alt="" class="badgeIcon">
+                      <span class="badgeCount">30</span>
+                     </span>
+                     <span class="badge">
+                         <img src="https://www.redditstatic.com/gold/awards/icon/silver_32.png" alt="" class="badgeIcon">
+                      <span class="badgeCount">30</span>
+                     </span>
+                     <span class="badge">
+                         <img src="https://www.redditstatic.com/gold/awards/icon/Illuminati_32.png" alt="" class="badgeIcon">
+                      <span class="badgeCount">30</span>
+                     </span>
+
+
+                 </div>
+      </div>
+<span class="joinButton"> <span class="joinText">Join</span><i class="joinButtonPlus fas fa-plus"></i></span>
+</div>
+
+<div class="postImgContainer">
+        <h5 class="postText">Rate my Gaming Setup</h5>
+    <img src="https://images.unsplash.com/photo-1598550476439-6847785fcea6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80" alt="" class="postImg">
+    </div>
+<div class="postFooter">
+<div class="postFooterIcons">
+<div class="postFooterIconContainer">
+
+    <i  style="color:gray;" class="far fa-comment-alt"></i>
+    <span class="footerText">170 Comments</span>
+
+
+</div>
+<div class="postFooterIconContainer">
+
+<i style="color:gray;" class="fas fa-share"></i>
+<span class="footerText">Share</span>
+
+
+</div>
+<div class="postFooterIconContainer">
+
+<i style="color:gray;" class="far fa-bookmark"></i>
+<span class="footerText">Save</span>
+
+
+</div>
+<div class="postFooterIconContainer">
+
+<i  style="color:gray;" class="fas fa-ellipsis-h"></i>
+
+
+
+</div>
+</div>
+
+</div>
+</div>
+<div class="postContainer">
+    <div class="postHeader">
+<div class="postLeft">
+<span class="upvoteContainer">
+<i class="upvote fas fa-long-arrow-alt-up"></i>
+<span class="upvoteCount">4.8k</span>
+<i class="downvote fas fa-long-arrow-alt-down"></i>
+</span>
+</div>
+      <div class="postCenter">
+                 <div class="postPage">
+                     <img src="https://styles.redditmedia.com/t5_2tn4t/styles/communityIcon_8drzyj2qc5f21.png" alt="" class="postPageImg">
+<span class="postPageName">DankIndianGamers</span>
+                 </div>
+                 <span class="postedBy">Posted by  u/Jeenius14 10 hours ago</span>
+                 <div class="badges">
+                     <span class="badge">
+                         <img src="https://preview.redd.it/award_images/t5_22cerq/klvxk1wggfd41_Helpful.png?width=32&height=32&crop=smart&auto=webp&s=e50908c50d797edd935ba8b5d9f0fb1372ff0bae" alt="" class="badgeIcon">
+                      <span class="badgeCount">30</span>
+                     </span>
+                     <span class="badge">
+                         <img src="https://preview.redd.it/award_images/t5_22cerq/5izbv4fn0md41_Wholesome.png?width=32&height=32&crop=smart&auto=webp&s=b3267c9d510c7b06dda6ec7d53cb587b9e822e44" alt="" class="badgeIcon">
+                      <span class="badgeCount">30</span>
+                     </span>
+                     <span class="badge">
+                         <img src="https://www.redditstatic.com/gold/awards/icon/silver_32.png" alt="" class="badgeIcon">
+                      <span class="badgeCount">30</span>
+                     </span>
+                     <span class="badge">
+                         <img src="https://www.redditstatic.com/gold/awards/icon/Illuminati_32.png" alt="" class="badgeIcon">
+                      <span class="badgeCount">30</span>
+                     </span>
+
+
+                 </div>
+      </div>
+<span class="joinButton"> <span class="joinText">Join</span><i class="joinButtonPlus fas fa-plus"></i></span>
+</div>
+
+<div class="postImgContainer">
+        <h5 class="postText">Rate my Gaming Setup</h5>
+    <img src="https://images.unsplash.com/photo-1598550476439-6847785fcea6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80" alt="" class="postImg">
+    </div>
+<div class="postFooter">
+<div class="postFooterIcons">
+<div class="postFooterIconContainer">
+
+    <i  style="color:gray;" class="far fa-comment-alt"></i>
+    <span class="footerText">170 Comments</span>
+
+
+</div>
+<div class="postFooterIconContainer">
+
+<i style="color:gray;" class="fas fa-share"></i>
+<span class="footerText">Share</span>
+
+
+</div>
+<div class="postFooterIconContainer">
+
+<i style="color:gray;" class="far fa-bookmark"></i>
+<span class="footerText">Save</span>
+
+
+</div>
+<div class="postFooterIconContainer">
+
+<i  style="color:gray;" class="fas fa-ellipsis-h"></i>
+
+
+
+</div>
+</div>
+
+</div>
+</div>
+</div>
+
+
+</div>
+<div class="mainContentRight">
+<div class="topNewsCommunities">
+<div class="topnewsHeader">
+<img src="https://styles.redditmedia.com/t5_2r5rp/styles/bannerBackgroundImage_xjz99n5qt8p61.png" alt="" class="topnewsHeaderImg">
+</div>
+<div class="topnewsContent">
+<span class="singleCommunity">
+<span class="ranking">1</span>
+<i class="greenarrow fas fa-chevron-up"></i>
+<span class="communityContainer">
+<img src="https://styles.redditmedia.com/t5_2zcp2/styles/communityIcon_gflpzojnfs621.png" alt="" class="communityLogo">
+<span class="communityName">
+r/dogecoin
+</span>
+</span>
+</span>
+<span class="singleCommunity">
+    <span class="ranking">2</span>
+    <i class="greenarrow fas fa-chevron-up"></i>
+    <span class="communityContainer">
+    <img src="https://styles.redditmedia.com/t5_2tk95/styles/communityIcon_hrq90p2z27k11.jpg?format=pjpg&s=2d15665234525abcee684b15b272c9fbc1103003" alt="" class="communityLogo">
+    <span class="communityName">
+    r/dataisinteresting
+    </span>
+    </span>
+    </span>
+    <span class="singleCommunity">
+        <span class="ranking">3</span>
+        <i class="greenarrow fas fa-chevron-up"></i>
+        <span class="communityContainer">
+        <img src="https://b.thumbs.redditmedia.com/b19-jQLBsVc2-EQfPx5WEQkYIL_clR0mhba4-pHT0AA.png" alt="" class="communityLogo">
+        <span class="communityName">
+        r/damnThatsIntersting
+        </span>
+        </span>
+        </span>
+        <span class="singleCommunity">
+            <span class="ranking">4</span>
+            <i class="greenarrow fas fa-chevron-up"></i>
+            <span class="communityContainer">
+            <img src="https://styles.redditmedia.com/t5_2sgp1/styles/communityIcon_sl39j85er1d51.png" alt="" class="communityLogo">
+            <span class="communityName">
+            r/pcmastercase
+            </span>
+            </span>
+            </span>
+            <span class="singleCommunity">
+                <span class="ranking">5</span>
+                <i class="greenarrow fas fa-chevron-up"></i>
+                <span class="communityContainer">
+                <img src="https://styles.redditmedia.com/t5_2yo6b/styles/communityIcon_sfbxdgfr14t71.png" alt="" class="communityLogo">
+                <span class="communityName">
+                r/oddlyinsane
+                </span>
+                </span>
+                </span>
+<div class="viewAllBtn">
+    <span class="viewBtnText">View All</span>
+</div>
+<div class="linkContainer">
+ <span class="singleLinkContainer">
+     <span class="linkText">Near You</span>
+ </span>
+ <span class="singleLinkContainer">
+    <span class="linkText">News</span>
+</span>
+<span class="singleLinkContainer">
+    <span class="linkText">Sports</span>
+</span>
+<span class="singleLinkContainer">
+    <span class="linkText">Gaming</span>
+</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+
+
+
+
+</div>
+  </body>
+</html>
